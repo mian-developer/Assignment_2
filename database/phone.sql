@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2018 at 08:48 AM
+-- Generation Time: Dec 26, 2018 at 08:55 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -42,7 +42,8 @@ CREATE TABLE `contacts` (
 INSERT INTO `contacts` (`id`, `name`, `numbers`, `user_id`) VALUES
 (8, 'zeshan', 453453, 4),
 (12, 'izhan', 65652727, 5),
-(13, 'attiq', 3478368, 7);
+(13, 'attiq', 3478368, 7),
+(14, 'azhar', 352876287, 6);
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user`
