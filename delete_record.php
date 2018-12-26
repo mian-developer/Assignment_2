@@ -9,7 +9,7 @@ header("location: login.php");
 $rid=$_GET['id'];
 $del=$db->delete($rid);
 if($del==1){
-header("location: phonebook.php");
+header("location: index.php");
 //echo("Deleted");
 }
 

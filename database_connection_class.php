@@ -31,7 +31,7 @@ class DB_Connect
 
 	public function login($email,$password)
 	{
-		$query="SELECT `email`,`password` FROM user WHERE email='$email' AND password='$password'";
+		$query="SELECT `id`,`email` FROM user WHERE email='$email' AND password='$password'";
 
 		$result=$this->db->query($query)
 

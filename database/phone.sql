@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2018 at 03:38 AM
+-- Generation Time: Dec 26, 2018 at 08:48 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.2.12
 
@@ -41,8 +41,8 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `name`, `numbers`, `user_id`) VALUES
 (8, 'zeshan', 453453, 4),
-(11, 'koita', 3566364, 4),
-(12, 'izhan', 65652727, 5);
+(12, 'izhan', 65652727, 5),
+(13, 'attiq', 3478368, 7);
 
 -- --------------------------------------------------------
 
@@ -54,7 +54,7 @@ CREATE TABLE `user` (
   `id` int(10) NOT NULL,
   `name` varchar(20) DEFAULT NULL,
   `email` varchar(30) NOT NULL,
-  `password` char(25) NOT NULL
+  `password` char(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -66,7 +66,9 @@ INSERT INTO `user` (`id`, `name`, `email`, `password`) VALUES
 (2, 'mian', 'mian@yahoo.com', 'c0e2f06469caa8e2998aba4e7'),
 (3, 'asad', 'asad@yahoo.com', '202cb962ac59075b964b07152'),
 (4, 'alia', 'alia@hotmail.com', '123'),
-(5, 'usman', 'usman@yahoo.com', '123');
+(5, 'usman', 'usman@yahoo.com', '123'),
+(6, 'HInza', 'hinza@yahoo.com', '202cb962ac59075b964b07152d234b70'),
+(7, 'erozgar', 'erozgar@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +95,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

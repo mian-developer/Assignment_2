@@ -46,7 +46,7 @@ if(isset($_POST['update'])){
 
 		$result=$db->update($id,$name,$number);
 		if($result==1){
-			header('Location:phonebook.php');
+			header('Location:index.php');
 		}else{
 			
             $failure='Check For Errors!';

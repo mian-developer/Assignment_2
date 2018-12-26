@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['users'])) {
-  header('Location: phonebook.php');
+  header('Location: index.php');
   die();
 }
 
@@ -26,16 +26,19 @@ if(isset($_POST['login'])){
 		require_once('database_connection_class.php');
 
 		$db=new DB_Connect();
-		
+		//$id=$_POST['id'];
 		$email=$_POST['email'];
-		$pass=$_POST['pass'];
+		$pass=md5($_POST['pass']);
 
 		$result=$db->login($email,$pass);
 		if(mysqli_num_rows($result)>0){
 			while ($data = mysqli_fetch_assoc($result)) {
+				$id= $data['id'];
+				//$name= $data['name'];
                 $_SESSION['email']= $email;
+                $_SESSION['id']=$id;
     			$_SESSION['users']= "user";
-    			header("Location: phonebook.php");
+    			header("Location: index.php");
   			}
 		}else{
 			header('Location:login_error.php');
@@ -99,6 +102,13 @@ function test_input($data) {
 				</div>
 
 				<form class="login100-form validate-form" method="post" action="">
+
+					<div >
+						
+						<input class="input100" type="hidden" name="id" value="<?php echo $id ?>">
+					
+					</div>
+
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Email is required">
 						<span class="label-input100">Email</span>
 						<input class="input100" type="text" name="email" placeholder="Enter Email">

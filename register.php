@@ -34,7 +34,7 @@ if(isset($_POST['register'])){
 		$db=new DB_Connect();
 		$name=$_POST['username'];
 		$email=$_POST['email'];
-		$pass=$_POST['pass'];
+		$pass=md5($_POST['pass']);
 
 		$result=$db->register($name,$email,$pass);
 		if($result==1){

@@ -79,10 +79,10 @@ body {
 <body>
 
 <div class="header">
-  <a href="phonebook.php" class="logo">Phone Book Directory</a>
+  <a href="index.php" class="logo">Phone Book Directory</a>
   <div class="header-right">
-    <a class="active" href="phonebook.php">Home</a>
-    <a href="#">Welcome : <?php echo $_SESSION["email"]; ?></a>
+    <a class="active" href="index.php">Home</a>
+    <a href="#">Welcome : <?php echo $_SESSION['email']; ?></a>
     <a href="logout.php">Logout</a>
   </div>
 </div>

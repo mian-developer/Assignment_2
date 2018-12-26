@@ -29,12 +29,12 @@ if(isset($_POST['add'])){
 		$name=$_POST['name'];
 		$number=$_POST['num'];
 		//$set=$_SESSION['uid']="id";
-		$uid=$_POST['uid'];
+		$uid=$_SESSION['id'];
 		
 
 		$result=$db->add($name,$number,$uid);
 		if($result==1){
-			header('Location:phonebook.php');
+			header('Location:index.php');
 		}else{
 			
             $failure='Check For Errors!';
@@ -97,6 +97,13 @@ function test_input($data) {
 				</div>
 
 				<form class="login100-form validate-form" method="post" action="">
+
+					<div >
+						
+						<input class="input100" type="hidden" name="id">
+						
+					</div>
+
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Name is required">
 						<span class="label-input100">Name</span>
 						<input class="input100" type="text" name="name" placeholder="Enter Name">
@@ -111,12 +118,7 @@ function test_input($data) {
 						<span class="error"><?php echo $number_error;?></span>
 					</div>
 
-					<div class="wrap-input100 validate-input m-b-26">
-						<span class="label-input100">User_Id</span>
-						<input class="input100" type="number" name="uid" placeholder="Enter User_Id">
-						<span class="focus-input100"></span>
-						
-					</div>
+				
 
 			
 
