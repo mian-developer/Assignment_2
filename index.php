@@ -9,12 +9,14 @@ if ($_SESSION['users']!='user') {
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Phone Directory</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
 
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  
   <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 
@@ -93,7 +95,8 @@ body {
     <div class="panel-heading text-center"><h3><b>Phone Book Records</b></h3></div>
     <div class="panel-body">
     	<tr><a href="add_record.php" class="btn btn-success">Add Record</a></tr>
-  <table class="table" id="example">
+     
+  <table class="table table-bordered table-hover table-responsive" id="example">
   	
  	<hr>
   <thead style="margin-top:30px">
